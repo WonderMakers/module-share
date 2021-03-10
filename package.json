@@ -1,0 +1,22 @@
+{
+  "name": "share",
+  "version": "1.0.0",
+  "description": "share",
+  "repository": {
+    "type": "git",
+    "url": "https://git.hzberg.com/modules/share"
+  },
+  "main": "dist/nuxt.share.module.js",
+  "scripts": {
+    "lib-nuxt-module": "webpack --config ./src/nuxt-module/webpack.config.js",
+    "lib-nuxt-plugin": "webpack --config ./src/nuxt-plugin/webpack.config.js",
+    "libs": "npm run lib-nuxt-module && npm run lib-nuxt-plugin",
+    "build": "npm run libs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0"
+  }
+}
