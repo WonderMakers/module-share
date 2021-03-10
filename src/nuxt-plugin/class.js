@@ -1,4 +1,4 @@
-import confing from './config'
+import config from './config'
 
 export class Share {
   constructor (options, isDev) {
@@ -8,7 +8,7 @@ export class Share {
 
   open (social, params = {}) {
     const data = Share.getData(params)
-    const createLink = confing.socials[social]
+    const createLink = config.socials[social]
     if (createLink) {
       const link = createLink(data)
       Share.popup(link)
