@@ -10,7 +10,7 @@ export class Share {
     const data = Share.getData(params)
     const createLink = config.socials[social]
     if (createLink) {
-      const link = createLink(data)
+      const link = createLink(data.url, data.title, data.description, data.image)
       Share.popup(link)
     }
   }
